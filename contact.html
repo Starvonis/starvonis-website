@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>StarVonis Software Solutions</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="/images/log1.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/log1.png">
+<link rel="icon" type="image/x-icon" href="images/log1.ico">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <a class="brand" href="index.html">
+  <img src="images/log2_imresizer-removebg-preview.png" alt="StarVonis Logo" width="180" height="180" class="logo">
+  
+  
+</a>
+      <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <nav id="mainNav" class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-intro" data-animate>
+      <h1>Contact Us</h1>
+      <p>Have a project or a question? Send us a message and we'll respond quickly.</p>
+    </section>
+
+    <section class="contact-grid" data-animate>
+      <form id="contactForm" class="contact-form" novalidate>
+        <label>Full name<input name="name" type="text" required></label>
+        <label>Email address<input name="email" type="email" required></label>
+        <label>Phone (optional)<input name="phone" type="tel"></label>
+        <label>Message<textarea name="message" rows="6" required></textarea></label>
+        <label>Attach resume (optional)<input name="resume" type="file" accept=".pdf,.doc,.docx"></label>
+        <button class="btn primary" type="submit">Send Message</button>
+        <div id="formMsg" class="form-msg" aria-live="polite"></div>
+      </form>
+
+      <div class="contact-info">
+        <h3>Office</h3>
+        <p>StarVonis Software Solutions Pvt. Ltd.<br>Hyderabad, India</p>
+        <p>Email: <a href="mailto:hr@starvonis.com">hr@starvonis.com</a><br>Phone: +91 7680900716</p>
+        <div class="small">We typically reply within 24 hours.</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>StarVonis Software Solutions Pvt. Ltd.</strong>
+        <p>Innovative software. Reliable delivery.</p>
+      </div>
+      <div class="footer-links">
+        <a href="terms.html">Terms &amp; Conditions</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="copyright">© 2025 StarVonis. All rights reserved.</div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

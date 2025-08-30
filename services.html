@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>StarVonis Software Solutions</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="/images/log1.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/log1.png">
+<link rel="icon" type="image/x-icon" href="images/log1.ico">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <a class="brand" href="index.html">
+  <img src="images/log2_imresizer-removebg-preview.png" alt="StarVonis Logo" width="180" height="180" class="logo">
+  
+</a>
+      <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <nav id="mainNav" class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-intro" data-animate>
+      <h1>Services</h1>
+      <p>We offer a range of services to help companies build, scale, and operate software products.</p>
+    </section>
+
+    <section class="service-list" data-animate>
+      <div class="service-card" tabindex="0">
+        <h3>Web & Mobile Development</h3>
+        <p>React, Next.js, Flutter, and backend APIs to deliver high-quality products.</p>
+        <button class="btn small open-modal" data-title="Web & Mobile Development" data-text="We build responsive web apps, progressive web apps, and mobile apps with modern frameworks.">Learn More</button>
+      </div>
+
+      <div class="service-card" tabindex="0">
+        <h3>Cloud & DevOps</h3>
+        <p>CI/CD, containerization, monitoring, and scalable cloud architecture.</p>
+        <button class="btn small open-modal" data-title="Cloud & DevOps" data-text="We design and operate secure, scalable cloud infrastructure and automate deployments.">Learn More</button>
+      </div>
+
+      <div class="service-card" tabindex="0">
+        <h3>Staffing Solutions</h3>
+        <p>Talented developers and engineers available for short-term or long-term engagements.</p>
+        <button class="btn small open-modal" data-title="Staffing Solutions" data-text="We match you with skilled engineers and handle onboarding, payroll, and compliance.">Learn More</button>
+      </div>
+    </section>
+  </main>
+
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <button id="modalClose" class="modal-close" aria-label="Close">✕</button>
+      <h3 id="modalTitle"></h3>
+      <p id="modalText"></p>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>StarVonis Software Solutions Pvt. Ltd.</strong>
+        <p>Innovative software. Reliable delivery.</p>
+      </div>
+      <div class="footer-links">
+        <a href="terms.html">Terms &amp; Conditions</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="copyright">© 2025 StarVonis. All rights reserved.</div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
