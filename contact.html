@@ -8,20 +8,23 @@
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/x-icon" href="/images/log1.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="images/log1.png">
-  <link rel="icon" type="image/x-icon" href="images/log1.ico">
+<link rel="icon" type="image/x-icon" href="images/log1.ico">
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
+
       <a class="brand" href="index.html">
-        <img src="images/log2_imresizer-removebg-preview.png" alt="StarVonis Logo" width="180" height="180" class="logo">
-      </a>
+  <img src="images/log2_imresizer-removebg-preview.png" alt="StarVonis Logo" width="180" height="180" class="logo">
+  
+  
+</a>
       <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
       <nav id="mainNav" class="nav">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
-        <a href="Our Verticles.html">Our Verticles</a>
+         <a href="Our Verticles.html">Our Verticles</a>
         <a href="contact.html" class="active">Contact</a>
       </nav>
     </div>
@@ -34,33 +37,20 @@
     </section>
 
     <section class="contact-grid" data-animate>
-      <!-- Contact Form -->
-      <form id="contactForm" class="contact-form" novalidate enctype="multipart/form-data">
-        <label>Full name
-          <input name="name" type="text" required>
-        </label>
-        <label>Email address
-          <input name="email" type="email" required>
-        </label>
-        <label>Phone (optional)
-          <input name="phone" type="tel">
-        </label>
-        <label>Message
-          <textarea name="message" rows="6" required></textarea>
-        </label>
-        <label>Attach resume (optional)
-          <input name="resume" type="file" accept=".pdf,.doc,.docx">
-        </label>
+      <form id="contactForm" class="contact-form" novalidate>
+        <label>Full name<input name="name" type="text" required></label>
+        <label>Email address<input name="email" type="email" required></label>
+        <label>Phone (optional)<input name="phone" type="tel"></label>
+        <label>Message<textarea name="message" rows="6" required></textarea></label>
+        <label>Attach resume (optional)<input name="resume" type="file" accept=".pdf,.doc,.docx"></label>
         <button class="btn primary" type="submit">Send Message</button>
         <div id="formMsg" class="form-msg" aria-live="polite"></div>
       </form>
 
-      <!-- Office Info -->
       <div class="contact-info">
         <h3>Office</h3>
         <p>StarVonis Software Solutions Pvt. Ltd.<br>Hyderabad, India</p>
-        <p>Email: <a href="mailto:hr@starvonis.com">hr@starvonis.com</a><br>
-        Phone: +91 7680900716</p>
+        <p>Email: <a href="mailto:hr@starvonis.com">hr@starvonis.com</a><br>Phone: +91 7842128798</p>
         <div class="small">We typically reply within 24 hours.</div>
       </div>
     </section>
@@ -80,44 +70,6 @@
     </div>
     <div class="copyright">© 2025 StarVonis. All rights reserved.</div>
   </footer>
-
-  <!-- ✅ Script fixed -->
-  <script>
-    const form = document.getElementById("contactForm");
-    const msgBox = document.getElementById("formMsg");
-
-    form.addEventListener("submit", async (e) => {
-      e.preventDefault();
-
-      const formData = new FormData(form);
-
-      try {
-        const res = await fetch("/contact", {
-          method: "POST",
-          body: formData,
-        });
-
-        const contentType = res.headers.get("content-type");
-        if (!contentType || !contentType.includes("application/json")) {
-          throw new Error("Invalid server response. Expected JSON.");
-        }
-
-        const result = await res.json();
-
-        if (result.success) {
-          msgBox.textContent = "✅ Your message was sent successfully!";
-          msgBox.style.color = "green";
-          form.reset();
-        } else {
-          msgBox.textContent = "❌ " + (result.error || "Something went wrong.");
-          msgBox.style.color = "red";
-        }
-      } catch (err) {
-        msgBox.textContent = "⚠️ Network error: " + err.message;
-        msgBox.style.color = "red";
-      }
-    });
-  </script>
 
   <script src="app.js"></script>
 </body>
